@@ -1,0 +1,28 @@
+{
+  "name": "brodsky_uhp_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -L app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmaClairBrodsky/Brodsky_UHP_Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EmmaClairBrodsky/Brodsky_UHP_Portfolio/issues"
+  },
+  "homepage": "https://github.com/EmmaClairBrodsky/Brodsky_UHP_Portfolio#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

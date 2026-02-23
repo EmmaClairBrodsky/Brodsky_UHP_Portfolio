@@ -1,0 +1,268 @@
+:root {
+  --color-pink: #FF76B7;
+  --color-lavender: #E2C6FE;
+  --color-peach:#FFA981;
+  --color-maroon: #9E1F63;
+  --color-lightpink:#ffd3f7;
+  --color-primary: #990000;
+  --color-primary-dark: #6b0000;
+  --color-link: #1f5d81;
+  --color-background: #f0ece4;
+  --color-white: #ffffff;
+  --color-dark: #1a1a1a;
+  --color-muted: #6b6560;
+  --color-border: #ddd8d0;
+  --color-card-1: #ffffff;
+  --color-card-2: #fff8f0;
+  --color-card-3: #f5f0ff;
+  --color-card-4: #f0f7ff;
+  --color-card-5: #fff0f5;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius: 18px;
+  --shadow: 0 2px 16px rgba(0,0,0,0.07);
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-lightpink);
+  color: var(--color-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+/********** HEADER **********/
+
+header {
+  background-color: var(--color-maroon);
+  color: var(--color-lightpink);
+  padding: 14px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(100,0,0,0.18);
+}
+
+.header-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-nav > a,
+.header-nav > .dropdown > a {
+  color: var(--color-lightpink);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color var(--transition);
+}
+
+.header-nav > a:hover,
+.header-nav > .dropdown > a:hover {
+  color: var(--color-peach);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-maroon);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  padding: 8px 0;
+  min-width: 140px;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu a {
+  color: var(--color-lightpink);
+  font-size: 0.85rem;
+  padding: 9px 18px;
+  transition: background var(--transition);
+}
+
+.dropdown-menu a:hover {
+  background: var(--color-background);
+}
+
+/********** MAIN / BENTO GRID **********/
+
+main {
+  flex: 1;
+  padding: 36px 32px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 220px 220px auto;
+  gap: 16px;
+}
+
+/********** BENTO CARDS **********/
+
+.bento-card {
+  background: var(--color-card-1);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  animation: fadeUp 0.5s ease both;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card-tag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  background: rgba(153,0,0,0.08);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 99px;
+  align-self: flex-start;
+}
+
+.bento-card h1 {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  line-height: 1.1;
+  color: var(--color-dark);
+}
+
+.bento-card h1 em {
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+.bento-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.bento-card p {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+.card-link {
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: letter-spacing var(--transition);
+}
+
+.card-link:hover {
+  letter-spacing: 0.03em;
+}
+
+/* Grid placement
+   Row 1: hero (cols 1-5) | bio (cols 6-12)
+   Row 2: hero (cols 1-5) | academic (cols 6-12)
+   Row 3: professional (cols 1-4) | personal (cols 5-8) | contact (cols 9-12)
+*/
+.card-hero         { grid-column: 1 / 6;  grid-row: 1 / 3; background: var(--color-white);  animation-delay: 0.05s; }
+.card-bio          { grid-column: 6 / 13; grid-row: 1 / 2; background: var(--color-card-2); animation-delay: 0.1s; }
+.card-academic     { grid-column: 6 / 13; grid-row: 2 / 3; background: var(--color-card-3); animation-delay: 0.15s; }
+.card-professional { grid-column: 1 / 5;  grid-row: 3 / 4; background: var(--color-card-4); animation-delay: 0.2s; }
+.card-personal     { grid-column: 5 / 9;  grid-row: 3 / 4; background: var(--color-card-5); animation-delay: 0.25s; }
+.card-contact      { grid-column: 9 / 13; grid-row: 3 / 4; background: var(--color-primary); animation-delay: 0.3s; }
+
+/* Contact card inverted colors */
+.card-contact .card-tag {
+  background: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+}
+.card-contact h2,
+.card-contact p {
+  color: var(--color-white);
+}
+.card-contact p {
+  opacity: 0.8;
+}
+.card-contact .card-link {
+  color: var(--color-white);
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bento-grid { grid-template-columns: 1fr 1fr; }
+  .card-hero, .card-bio, .card-contact { grid-column: span 2; }
+  .card-academic, .card-professional, .card-personal { grid-column: span 1; }
+  .bento-card h1 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .bento-grid { grid-template-columns: 1fr; }
+  .card-hero, .card-bio, .card-academic,
+  .card-professional, .card-personal, .card-contact { grid-column: span 1; }
+  main { padding: 20px 16px; }
+  .header-nav { gap: 16px; }
+}
+
+/********** FOOTER **********/
+
+footer {
+  border-top: 2px solid var(--color-border);
+  background-color: var(--color-white);
+  padding: 14px 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}

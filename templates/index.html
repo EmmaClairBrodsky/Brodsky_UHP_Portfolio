@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emma Clair Brodsky | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-name">Emma Clair Brodsky</div>
+    <nav class="header-nav">
+      <a href="#">Home</a>
+      <a href="#">Bio</a>
+      <div class="dropdown">
+        <a href="#">Portfolio ▾</a>
+        <div class="dropdown-menu">
+          <a href="#">Academic</a>
+          <a href="#">Professional</a>
+          <a href="#">Personal</a>
+        </div>
+      </div>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="bento-grid">
+
+      <!-- Hero card -->
+      <div class="bento-card card-hero">
+        <div class="card-tag">Portfolio</div>
+        <h1>Hello, I'm<br><em>Emma.</em></h1>
+        <p>Student. Writer. Creator.<br>Welcome to my UHP portfolio.</p>
+      </div>
+
+      <!-- Bio card -->
+      <div class="bento-card card-bio">
+        <div class="card-tag">About Me</div>
+        <h2>Bio</h2>
+        <p>Add a short bio here — who you are, what you study, what drives you.</p>
+      </div>
+
+      <!-- Academic card -->
+      <div class="bento-card card-academic">
+        <div class="card-tag">Work</div>
+        <h2>Academic</h2>
+        <p>Essays, research, and coursework that reflect your intellectual journey.</p>
+        <a href="#" class="card-link">View work →</a>
+      </div>
+
+      <!-- Professional card -->
+      <div class="bento-card card-professional">
+        <div class="card-tag">Experience</div>
+        <h2>Professional</h2>
+        <p>Internships, jobs, and projects that have shaped your career path.</p>
+        <a href="#" class="card-link">View work →</a>
+      </div>
+
+      <!-- Personal card -->
+      <div class="bento-card card-personal">
+        <div class="card-tag">Creative</div>
+        <h2>Personal</h2>
+        <p>Passion projects and creative pursuits outside the classroom.</p>
+        <a href="#" class="card-link">View work →</a>
+      </div>
+
+      <!-- Contact card -->
+      <div class="bento-card card-contact">
+        <div class="card-tag">Get in Touch</div>
+        <h2>Contact</h2>
+        <p>Feel free to reach out.</p>
+        <a href="mailto:you@email.com" class="card-link">you@email.com →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Emma Clair Brodsky &mdash; UHP Portfolio &mdash; <span id="year"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
