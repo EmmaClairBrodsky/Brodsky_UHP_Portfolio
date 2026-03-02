@@ -8,6 +8,9 @@ const PORT = 3000;
 
 const templatesPath = path.join(__dirname, 'templates');
 
+// Use absolute path for static files — required for Vercel
+app.use(express.static(path.join(__dirname, 'static')));
+
 // Add your code here
 app.use(express.static('static'));
 
