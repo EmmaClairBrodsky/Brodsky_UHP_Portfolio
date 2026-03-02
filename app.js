@@ -11,6 +11,22 @@ const templatesPath = path.join(__dirname, 'templates');
 // Add your code here
 app.use(express.static('static'));
 
+app.get('/portfolio/academic', (req, res) => {
+    res.sendFile(path.join(templatesPath, 'portfolio','academic.html'));
+});
+
+app.get('/portfolio/essay', (req, res) => {
+    res.sendFile(path.join(templatesPath, 'portfolio','essay.html'));
+});
+
+app.get('/portfolio/personal', (req, res) => {
+    res.sendFile(path.join(templatesPath, 'portfolio','personal.html'));
+});
+
+app.get('/portfolio/professional', (req, res) => {
+    res.sendFile(path.join(templatesPath, 'portfolio','professional.html'));
+});
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(templatesPath, 'index.html'));
 });

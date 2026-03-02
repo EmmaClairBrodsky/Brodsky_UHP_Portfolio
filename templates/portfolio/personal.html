@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal — Emma Brodsky</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header>
+    <span class="header-name">Emma Clair Brodsky</span>
+    <nav class="header-nav">
+      <a href="/">Home</a>
+      <div class="dropdown">
+        <a href="#">Portfolio ▾</a>
+        <div class="dropdown-menu">
+          <a href="/portfolio/professional">Professional</a>
+          <a href="/portfolio/academic">Academic</a>
+          <a href="/portfolio/personal">Personal</a>
+          <a href="/portfolio/essay">Senior Reflection Essay</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <p class="page-title">Personal Highlights</p>
+    <p class="page-subtitle">Organizations, adventures, and creative pursuits outside the classroom.</p>
+
+    <div class="page-grid">
+
+      <div class="bento-card card-pink-bg card-full">
+        <span class="card-tag">Aug 2025–Present</span>
+        <h2>SLCCE — Students Leading Collaborative Computing Education</h2>
+        <p>Beginning in August 2025, I joined the nonprofit organization Students Leading Collaborative Computing Education as part of the CSC and Marketing teams. Through this on-campus organization, I am able to develop educational Python models for high school students. As part of the CSC team, it's my job to assist in implementation of an educational game, where students alter the underlying code to solve puzzles. STEM outreach for young students is essential to me because the passion and imagination I had when I first learned to code drives me now. I believe that all students should have access to a basic technological education, and am excited that I get to be a part of achieving this goal.</p>
+        <div class="artifact-placeholder">
+          <span>🖼️</span>
+          <p>Photos &amp; screenshots coming soon.</p>
+        </div>
+      </div>
+
+      <div class="bento-card card-maroon card-full">
+        <span class="card-tag">High-Impact Experience · March 2025</span>
+        <h2>Amsterdam &amp; Paris UHP Study Abroad</h2>
+        <p>In March 2025, I had the incredible opportunity to travel to Amsterdam and Paris over Spring Break through the UHP program as a high-impact experience. The trip was largely centered around art, culture, and history. My favorite stops were the Art Museums: the Louvre, the Orangerie, and the Van Gogh museum. During this trip, I was able to step back from my busy schedule and learn from the insights and world-views of these historic artists. I was reminded of how important art is to me and how grateful I am to be a part of the artistic community. I realized that I thrive in environments that foster both technical and creative perspectives, and upon returning home, began researching graduate programs that would allow me to specialize my education in computer graphics and begin pursuing my goal of being a technical director. I realized I wanted to use my artistic and technical skills to help create works that inspire positive change and create software tools that empower artists to do the same.</p>
+        <div class="artifact-image-grid">
+          <div class="artifact-image-slot"><img src="/images/personal/amsterdam1.jpg" alt="Amsterdam trip photo"></div>
+          <div class="artifact-image-slot"><img src="/images/personal/amsterdam2.jpg" alt="Amsterdam trip photo"></div>
+          <div class="artifact-image-slot"><img src="/images/personal/amsterdam3.jpg" alt="Paris trip photo"></div>
+          <div class="artifact-image-slot"><img src="/images/personal/amsterdam4.jpg" alt="Paris trip photo"></div>
+        </div>
+      </div>
+
+      <div class="bento-card card-maroon card-full">
+        <span class="card-tag">High-Impact Experience · Spring 2023</span>
+        <h2>Creative Writing Crew</h2>
+        <p>In Spring 2023, I was able to participate in the Creative Writing Crew as a high-impact experience. The Creative Writing Crew was a group of passionate participants, staff, and grad student mentors that met weekly to work on our personal writing projects. I did not have much experience writing formally, but did enjoy storytelling through both visual mediums and through my hobby of tabletop games. The Creative Writing crew gave me the opportunity to stretch my writing wings in a non-judgemental environment where I could get feedback from my peers and mentors. The Creative Writing Crew also allowed me to set aside time to be creative while I was finishing the last semester of the First-Year Engineering Program, in which I had to maintain competitive grades in my technical classes. Not only did I improve as both a writer and analyst, I learned how to create time outside of school to intentionally practice creativity and meaningfully convey story.</p>
+        <div class="artifact-placeholder">
+          <span>📄</span>
+          <p>PDF writing sample coming soon.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Emma Clair Brodsky &copy; <span class="year"></span></p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      let closeTimer;
+      dropdown.addEventListener('mouseenter', () => { clearTimeout(closeTimer); menu.style.display = 'flex'; });
+      dropdown.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => { menu.style.display = ''; }, 150); });
+      menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+      menu.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => { menu.style.display = ''; }, 150); });
+    });
+  </script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

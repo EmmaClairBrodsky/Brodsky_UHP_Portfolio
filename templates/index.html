@@ -14,19 +14,18 @@
 <body>
 
   <header>
-    <div class="header-name">Emma Clair Brodsky</div>
+    <span class="header-name">Emma Clair Brodsky</span>
     <nav class="header-nav">
-      <a href="#">Home</a>
-      <a href="#">Bio</a>
+      <a href="/">Home</a>
       <div class="dropdown">
         <a href="#">Portfolio ▾</a>
         <div class="dropdown-menu">
-          <a href="#">Academic</a>
-          <a href="#">Professional</a>
-          <a href="#">Personal</a>
+          <a href="/portfolio/professional">Professional</a>
+          <a href="/portfolio/academic">Academic</a>
+          <a href="/portfolio/personal">Personal</a>
+          <a href="/portfolio/essay">Senior Reflection Essay</a>
         </div>
       </div>
-      <a href="#">Contact</a>
     </nav>
   </header>
 
@@ -36,31 +35,38 @@
       <!-- Hero card -->
       <div class="bento-card card-hero">
         <div class="card-tag">Portfolio</div>
-        <h1>Hello, I'm<br><em>Emma.</em></h1>
-        <p>Student. Writer. Creator.<br>Welcome to my UHP portfolio.</p>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h2><em>Emma Clair Brodsky's</em></h2>
+            <h1>University Honors Program Portfolio</h1>
+            <p>Engineer. Artist. Storyteller.</p>
+          </div>
+          <div class="hero-image">
+            <img src="/images/profile.jpg" alt="Emma Clair Brodsky" />
+          </div>
+        </div>
       </div>
 
       <!-- Bio card -->
       <div class="bento-card card-bio">
         <div class="card-tag">About Me</div>
         <h2>Bio</h2>
-        <p>Add a short bio here — who you are, what you study, what drives you.</p>
+        <p>Hello! My name is Emma Brodsky, and I am a senior at North Carolina State University studying Computer Science with a minor in Art & Design. My academic and professional work has focused on computer graphics, and I will continue this focus as I pursue graduate study at the University of Pennsylvania. I am passionate about the intersection of technology, visual storytelling, and animation, and I aspire to work as a technical director building tools that support artists and creative production pipelines.</p>
       </div>
 
-      <!-- Academic card -->
-      <div class="bento-card card-academic">
-        <div class="card-tag">Work</div>
-        <h2>Academic</h2>
-        <p>Essays, research, and coursework that reflect your intellectual journey.</p>
-        <a href="#" class="card-link">View work →</a>
+      <!-- Contact card -->
+      <div class="bento-card card-contact" style="gap: 6px; padding: 18px 28px;">
+        <div class="card-tag">Get in Touch</div>
+        <h2>Contact</h2>
+        <a href="https://www.linkedin.com/in/emmaclairbrodsky/" target="_blank" rel="noopener" class="card-link">LinkedIn →</a>
       </div>
 
       <!-- Professional card -->
       <div class="bento-card card-professional">
         <div class="card-tag">Experience</div>
         <h2>Professional</h2>
-        <p>Internships, jobs, and projects that have shaped your career path.</p>
-        <a href="#" class="card-link">View work →</a>
+        <p>Professional experiences and projects that have shaped my career path.</p>
+        <a href="/portfolio/professional" class="card-link">View work →</a>
       </div>
 
       <!-- Personal card -->
@@ -68,27 +74,54 @@
         <div class="card-tag">Creative</div>
         <h2>Personal</h2>
         <p>Passion projects and creative pursuits outside the classroom.</p>
-        <a href="#" class="card-link">View work →</a>
+        <a href="/portfolio/personal" class="card-link">View work →</a>
       </div>
 
-      <!-- Contact card -->
-      <div class="bento-card card-contact">
-        <div class="card-tag">Get in Touch</div>
-        <h2>Contact</h2>
-        <p>Feel free to reach out.</p>
-        <a href="mailto:you@email.com" class="card-link">you@email.com →</a>
+      <!-- Academic card -->
+      <div class="bento-card card-academic">
+        <div class="card-tag">Work</div>
+        <h2>Academic</h2>
+        <p>Essays, research, and coursework that reflect my unique undergraduate education.</p>
+        <a href="/portfolio/academic" class="card-link">View work →</a>
       </div>
 
     </div>
   </main>
 
   <footer>
-    <p>Emma Clair Brodsky &mdash; UHP Portfolio &mdash; <span id="year"></span></p>
+    <p>Emma Clair Brodsky &copy; <span class="year"></span></p>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
 
-</body>
-</html>
+    // Dropdown stays open when moving mouse to menu
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      let closeTimer;
+      dropdown.addEventListener('mouseenter', () => { clearTimeout(closeTimer); menu.style.display = 'flex'; });
+      dropdown.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => { menu.style.display = ''; }, 150); });
+      menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+      menu.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => { menu.style.display = ''; }, 150); });
+    });
+  </script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dropdown: keep open when moving mouse between trigger and menu
+    const dropdown = document.querySelector('.dropdown');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    let closeTimer;
+
+    dropdown.addEventListener('mouseenter', () => {
+      clearTimeout(closeTimer);
+      menu.style.display = 'flex';
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      closeTimer = setTimeout(() => {
+        menu.style.display = '';
+      }, 150);
+    });
+
+    menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+    menu.addEventListen

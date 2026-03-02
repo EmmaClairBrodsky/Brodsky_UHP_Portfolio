@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional — Emma Brodsky</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header>
+    <span class="header-name">Emma Clair Brodsky</span>
+    <nav class="header-nav">
+      <a href="/">Home</a>
+      <div class="dropdown">
+        <a href="#">Portfolio ▾</a>
+        <div class="dropdown-menu">
+          <a href="/portfolio/professional">Professional</a>
+          <a href="/portfolio/academic">Academic</a>
+          <a href="/portfolio/personal">Personal</a>
+          <a href="/portfolio/essay">Senior Reflection Essay</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <p class="page-title">Professional Portfolio</p>
+    <p class="page-subtitle">Research, engineering, and outreach experiences shaping my career in computer graphics.</p>
+
+    <div class="page-grid">
+
+      <div class="section-divider">Research Internships</div>
+
+      <div class="bento-card card-peach card-half">
+        <span class="card-tag">Research Intern · Jan 2026–Present</span>
+        <h2>Crowd Simulation for Weather Disaster Simulation</h2>
+        <p><strong>ARNAV Lab — CSC 490: Independent Project</strong></p>
+        <p>Starting in January 2026, I have had the opportunity to continue my Research Intern experience through the CSC 490: Independent Project course. I am currently working with the ARNAV lab to create a culminating final project that incorporates my former research with procedural texturing, my visual design skills, and crowd simulation techniques that can be applied to the lab's Weather Disaster Simulation. It is rewarding to see both my Computer Science and Design undergraduate education applied in a single project that allows me to tell a story I am passionate about.</p>
+        <div class="skill-chips">
+          <span class="skill-chip">C#</span>
+          <span class="skill-chip">Unity</span>
+          <span class="skill-chip">Agile</span>
+        </div>
+        <div class="artifact-placeholder">
+          <span>📄</span>
+          <p>Document preview &amp; project images coming soon.</p>
+        </div>
+      </div>
+
+      <div class="bento-card card-peach card-half">
+        <span class="card-tag">Research Intern · May–Dec 2025</span>
+        <h2>Procedural Texturing Using Triplanar Mapping</h2>
+        <p><strong>NC State College of Engineering &amp; College of Textiles</strong></p>
+        <p>May 2025 through December 2025, I had the opportunity to serve as a Research Intern for a Procedural Texturing project through both the College of Engineering and the College of Textiles. This work allowed me to gain experience in using both software tools and industry-standard design tools, as I would need to do as a software engineer for animation pipelines. Using the Maya API and Python PIL library, my professor and I worked closely with textile students to develop a dynamic texture adjustment system that would allow designers to efficiently model clothing that accommodates diverse body types and mobility needs. Through conducting research, collaborating with artists, and working on projects, I have learned that software and art are intricately interconnected and are a driving force for positive change.</p>
+        <div class="skill-chips">
+          <span class="skill-chip">MEL</span>
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">Javascript</span>
+          <span class="skill-chip">Three.js</span>
+          <span class="skill-chip">React</span>
+        </div>
+        <div class="artifact-placeholder">
+          <span>🖼️</span>
+          <p>Project images coming soon.</p>
+        </div>
+      </div>
+
+      <div class="section-divider">Campus Involvement</div>
+
+      <div class="bento-card card-lavender card-full">
+        <span class="card-tag">Aug 2023–Present</span>
+        <h2>NCSU Engineering Ambassador</h2>
+        <p>August 2023, I was admitted to the NCSU Engineering Ambassadors program. The Engineering Ambassador team is a select group of NCSU engineering students who host both on-campus and off-campus engineering events for current students, prospective students, and K-12 students. I have had the incredible opportunity of participating in both prospective student outreach and K-12 outreach. I am passionate about being an Engineering Ambassador because it allows me to speak personably with prospective students who have the same fears I had when I was beginning to apply to undergraduate programs: that I would have to choose between my interests. Through my time at NCSU, I've learned how to balance and navigate my interdisciplinary course load, and I enjoy sharing my wisdom and potential academic paths with incoming students.</p>
+        <div class="artifact-placeholder">
+          <span>🖼️</span>
+          <p>Photos from events &amp; outreach coming soon.</p>
+        </div>
+      </div>
+
+      <div class="section-divider">Project Experience</div>
+
+      <div class="bento-card card-pink-bg card-full">
+        <span class="card-tag">Jan–May 2025 · CSC 326</span>
+        <h2>WolfCafe — Professional Full-Stack Project</h2>
+        <p>January 2025 through May 2025, I was enrolled in CSC 326: Software Engineering course. The goal of this course is to simulate a professional environment, including a software engineering team, progress reports, and a culminating, deployable final assignment. My team worked on an application called WolfCafe that simulated an online cafe ordering system. There were roles for admin (to manage staff), staff (to manage inventory, menu items, and to view and fulfill orders), and customers (to order menu items). Through this project, I was able to gain experience in both a backend and frontend software engineering role and in software engineering practices currently used in industry.</p>
+        <div class="skill-chips">
+          <span class="skill-chip">Java</span>
+          <span class="skill-chip">Javascript</span>
+          <span class="skill-chip">REST API</span>
+          <span class="skill-chip">Spring Boot</span>
+          <span class="skill-chip">Hibernate</span>
+          <span class="skill-chip">Maven</span>
+          <span class="skill-chip">Agile</span>
+          <span class="skill-chip">Git</span>
+        </div>
+        <div class="artifact-placeholder">
+          <span>🖼️</span>
+          <p>Project screenshots coming soon.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Emma Clair Brodsky &copy; <span class="year"></span></p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      let closeTimer;
+      dropdown.addEventListener('mouseenter', () => { clearTimeout(closeTimer); menu.style.display = 'flex'; });
+      dropdown.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => { menu.style.display = ''; }, 150); });
+      menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+      menu.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => { menu.style.display = ''; }, 150); });
+    });
+  </script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
